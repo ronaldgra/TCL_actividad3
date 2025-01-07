@@ -1,0 +1,19 @@
+public class Main {
+    public static void main(String[] args) {
+        // Crear instancias de métodos de notificación
+        MetodoNotificacion correo = new CorreoElectronico();
+        MetodoNotificacion sms = new MensajeTexto();
+        MetodoNotificacion push = new NotificacionPush();
+
+        // Crear el gestor de notificaciones
+        NotificacionManager manager = new NotificacionManager();
+
+        // Agregar los métodos al gestor
+        manager.agregarMetodo(correo);
+        manager.agregarMetodo(sms);
+        manager.agregarMetodo(push);
+
+        // Enviar una notificación
+        manager.enviarNotificacion("Este es un mensaje de prueba.");
+    }
+}
