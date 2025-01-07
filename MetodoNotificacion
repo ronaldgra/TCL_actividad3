@@ -1,0 +1,3 @@
+public interface MetodoNotificacion {
+    void enviar(String mensaje);
+}
