@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class NotificacionManager {
+    private List<MetodoNotificacion> metodos;
+
+    public NotificacionManager() {
+        this.metodos = new ArrayList<>();
+    }
+
+    public void agregarMetodo(MetodoNotificacion metodo) {
+        metodos.add(metodo);
+    }
+
+    public void enviarNotificacion(String mensaje) {
+        for (MetodoNotificacion metodo : metodos) {
+            metodo.enviar(mensaje);
+        }
+    }
+}
