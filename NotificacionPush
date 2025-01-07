@@ -1,0 +1,6 @@
+public class NotificacionPush implements MetodoNotificacion {
+    @Override
+    public void enviar(String mensaje) {
+        System.out.println("Enviando notificación push: " + mensaje);
+    }
+}
